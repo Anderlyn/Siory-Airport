@@ -1,0 +1,78 @@
+/* 
+  Boilerplate frontend code for ReactJS + Webpack
+  Design, Developed and Maintained by André López🍣
+*/
+
+// Utils
+@import './styles/utils/fonts';
+@import './styles/utils/variables';
+@import './styles/utils/texts';
+
+// Components
+@import './styles/components/selectionscreen';
+@import './styles/components/thanksscreen';
+@import './styles/components/buyingscreen';
+@import './styles/components/receiptscreen';
+
+
+// Global
+@keyframes airplane_entering{
+  from{
+    bottom: 75px;
+    right: -75px
+  }to{
+    bottom: -75px;
+    right: 75px;
+  }
+}
+@keyframes airplane_out{
+  from{
+    bottom: -75px;
+    right: 75px;
+    
+  }to{
+    bottom: 20px;
+    right: -20px
+  }
+}
+
+body{
+  overflow: hidden;
+}
+
+.full-container{
+  width: 100%;
+  height: 100vh;
+}
+
+.section-initial{
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+
+.airplane_enter{
+  background-image: url('../dist/img/entrando.png');
+  width: 837px;
+  height: 690px;
+  background-size: cover;
+  position: absolute;
+  bottom: 75px;
+  right: -75px;
+  z-index: -1;
+  animation: airplane_entering 1s forwards;
+}
+
+.airplane_exit{
+  background-image: url('../dist/img/saliendo.png');
+  width:777px;
+  height: 590px;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  bottom: 75px;
+  right: -75px;
+  z-index: -1;
+  animation: airplane_out 1s forwards;
+}
